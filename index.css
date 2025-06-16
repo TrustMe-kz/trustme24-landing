@@ -8,6 +8,10 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
+* {
+  /* border: solid 1px red; */
+}
+
 body {
   margin: 0;
 }
@@ -2222,7 +2226,6 @@ figcaption {
 .hero-text._2 {
   width: 48vw;
   padding-left: 1rem;
-  /* margin-right: 100px; */
   background-image: -webkit-gradient(
     linear,
     left top,
@@ -2232,6 +2235,10 @@ figcaption {
     to(#66cccc)
   );
   background-image: linear-gradient(90deg, #008593, #00a3a3, #66cccc);
+  background-position: 400px 0; /* подбирается вручную под ширину "Trust" */
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
   text-align: left;
   -webkit-background-clip: text;
   background-clip: text;
@@ -2666,7 +2673,6 @@ figcaption {
   -webkit-box-pack: end;
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
-  justify-content: flex-end;
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
@@ -3149,7 +3155,7 @@ figcaption {
   display: -ms-flexbox;
   display: flex;
   overflow: hidden;
-  /* margin-left: 200px; */
+  margin-left: 130px;
   /* max-width: calc(100vw - 200px); */
   width: 90%;
   -webkit-box-orient: horizontal;
@@ -3161,6 +3167,12 @@ figcaption {
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
+}
+
+@media (max-width: 767px) {
+  .hero-text-holder {
+    margin-left: 0px;
+  }
 }
 
 /* здес */
