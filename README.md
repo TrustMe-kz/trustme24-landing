@@ -235,20 +235,6 @@ php -S localhost:8000
 
 ---
 
-## 📞 Контакты
-
-<div align="center">
-
-### 🏢 **TrustMe Team**
-
-[![Website](https://img.shields.io/badge/🌐_Website-trustme.com-00a3a3?style=for-the-badge)](https://trustme.com)
-[![Email](https://img.shields.io/badge/📧_Email-info@trustme.com-26b6b6?style=for-the-badge)](mailto:info@trustme.com)
-[![LinkedIn](https://img.shields.io/badge/💼_LinkedIn-TrustMe_Company-008593?style=for-the-badge)](https://linkedin.com/company/trustme)
-
-</div>
-
----
-
 <div align="center">
 
 ## 👨‍💻 Разработчик
