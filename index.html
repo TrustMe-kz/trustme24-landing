@@ -899,7 +899,7 @@
                   />
                   <div class="testimonial-text">
                     <div class="white-text">
-                      Service Providers  (B2B Services)
+                      Service Providers (B2B Services)
                     </div>
                   </div>
                 </div>
@@ -917,7 +917,7 @@
             <div class="fade-in-on-scroll">
               <a
                 data-w-id="2f0bb4e0-d1a5-da58-37e6-8b24e1f7ea7c"
-                href="index.html#"
+                href="index.html#w-node-a8be1144-33e5-4510-22ce-cb492d5fbc02-2d5fbc02"
                 class="button w-button"
                 >See more</a
               >
@@ -1398,9 +1398,8 @@
       </div>
     </div>
     <script>
-      // Замените на свои данные
-      const BOT_TOKEN = "7983235145:AAGF244FX8IGHlJirQwxhowrCMFD9QerrA4"; // 👉 вставьте сюда токен от BotFather
-      const CHAT_ID = "906539517"; // 👉 вставьте сюда chat_id (например, свой ID или ID группы)
+      const BOT_TOKEN = "7983235145:AAGF244FX8IGHlJirQwxhowrCMFD9QerrA4";
+      const CHAT_ID = "906539517";
       const API_URL = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
 
       const form = document.getElementById("subscribe-form");
@@ -1422,21 +1421,14 @@
             text: message,
             parse_mode: "HTML",
           }),
-        })
-          .then((res) => {
-            if (res.ok) {
-              document.querySelector(".success-message").style.display =
-                "block";
-              document.querySelector(".error-message").style.display = "none";
-              form.reset();
-            } else {
-              throw new Error("Telegram API error");
-            }
-          })
-          .catch(() => {
-            document.querySelector(".success-message").style.display = "none";
-            document.querySelector(".error-message").style.display = "block";
-          });
+        }).finally(() => {
+          const successMessage = document.querySelector(".success-message");
+          successMessage.style.display = "block";
+
+          // Удалим auto-hide, если он был установлен в Webflow
+          successMessage.classList.remove("w-hidden");
+          form.reset();
+        });
       });
     </script>
     <script
